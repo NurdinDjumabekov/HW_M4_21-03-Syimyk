@@ -1,0 +1,17 @@
+.parent_input {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 10px;
+}
+.input {
+  width: 450px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 30px;
+}
+p {
+  font-size: 25px;
+}
