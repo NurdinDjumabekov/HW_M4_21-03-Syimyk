@@ -1,0 +1,9 @@
+.ul {
+  width: 800px;
+  display: flex;
+  justify-content: space-between;
+}
+.parentBlock {
+  width: 800px;
+  margin: 20px auto;
+}
