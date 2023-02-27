@@ -1,0 +1,21 @@
+.wrapper {
+  text-align: center;
+  width: 800px;
+  margin: 0 auto;
+}
+.parent_btn {
+  position: fixed;
+  right: 20%;
+  top: 1px;
+}
+.btn_close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 35px   ;
+}
+.parent_input_add{
+  width: 90%;
+  margin: 150px auto 0;
+}
