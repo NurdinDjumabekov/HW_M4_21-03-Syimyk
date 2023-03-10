@@ -4,7 +4,7 @@ import axios from "axios";
 const baseUrl = "https://pokeapi.co/api/v2/pokemon?";
 
 export const fetchPokemons = async (setNewlist, page) => {
-  console.log(page, "page");
+  // console.log(page, "page");
 
   try {
     const { data } = await axios.get(baseUrl, {

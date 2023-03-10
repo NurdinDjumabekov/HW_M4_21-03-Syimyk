@@ -11,7 +11,7 @@ const Menu = () => {
               <a href="/">Главная</a>
             </li>
             <li>
-              <a href="/about">About</a>
+              <a href="/about">About pokemons</a>
             </li>
           </ul>
         </div>

@@ -1,20 +1,26 @@
 import axios from "axios";
 import { useEffect } from "react";
-// import React, { useState } from "react";
+import React, { useState } from "react";
+import { fetchPokemons } from "../../Api/FetchPokemos";
+import AboutPokemonCss from "./AboutPokemon.module.css";
 
-const baseUrl = "https://pokeapi.co/api/v2/pokemon";
 const AboutPokemon = () => {
-  //   const [base, setBase] = useState([]);
+  const [newlist, setNewlist] = useState([]);
   useEffect(() => {
-    axios
-      .get(baseUrl)
-      .then((res) => res.data)
-      .then((info) => console.log(info));
-  });
+    fetchPokemons(setNewlist);
+  }, []);
+
   return (
-    <>
-      <p>tyguhioj</p>
-    </>
+    <div className="container">
+      <div className={AboutPokemonCss.parent_AboutPokekmon}>
+        <h3>Pokemon names</h3>
+        <ul className={AboutPokemonCss.ul_for_li_AboutPokemon}>
+          {newlist.map((item, index) => {
+            return <li key={index}>{item.name}</li>;
+          })}
+        </ul>
+      </div>
+    </div>
   );
 };
 export default AboutPokemon;
