@@ -13,7 +13,7 @@ const PokemonCard = ({ card }) => {
       .then((res) => res.data)
       .then((info) => {
         setListUrl(info.sprites.other.dream_world.front_default);
-        // console.log(listUrl, "listUrl");
+        // console.log(info, "listUrl");
       });
   }, [listUrl, cardURL]);
   return (
