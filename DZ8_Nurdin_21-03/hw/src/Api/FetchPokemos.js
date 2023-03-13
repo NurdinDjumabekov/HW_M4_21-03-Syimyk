@@ -1,5 +1,5 @@
 import axios from "axios";
-
+import { sortItem } from "../common/Helpers";
 // const baseUrl = "https://pokeapi.co/api/v2/pokemon?limit=10&offset=10";
 const baseUrl = "https://pokeapi.co/api/v2/pokemon?";
 
@@ -21,14 +21,14 @@ export const fetchPokemons = async (setNewlist, page) => {
 
 const baseUrl_new = "https://pokeapi.co/api/v2/";
 
-export const fetchPokemonsSort = async (from, till) => {
+export const fetchPokemonsSort = async (from, till, type) => {
   let list = [];
   for (let i = from; i < till; i++) {
-    const data = await axios.get(baseUrl_new + `pokemon/` + i);
-    list.push(data.data);
-    console.log(list, "list");
-    return list;
+    const { data } = await axios.get(baseUrl_new + `pokemon/` + i);
+    list.push(data);
   }
+  return sortItem(list, type);
+  // console.log(sortItem(list, "weight"), "sortItem");
 };
 
 export const fetchPokemonsInfo = async (id) => {
